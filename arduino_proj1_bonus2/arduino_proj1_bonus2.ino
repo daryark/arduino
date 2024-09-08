@@ -12,12 +12,10 @@ void setup() {
 unsigned long previous = 0;
 const long intervalRed = 500;
 const long intervalYellow = 2000;
-unsigned int  prevToggle = YELLOW_LED;
 
 void loop() {
   unsigned long current = millis();
   if (digitalRead(SWITCH_BTN) == HIGH) {
-    prevToggle = digitalRead(RED_LED) ? YELLOW_LED : RED_LED;
     previous = 0;
 
     digitalWrite(RED_LED, LOW);
@@ -26,7 +24,7 @@ void loop() {
   } else {
     digitalWrite(GREEN_LED, LOW);
     if (!digitalRead(RED_LED) && !digitalRead(YELLOW_LED))
-      digitalWrite(prevToggle, HIGH);
+      digitalWrite(RED_LED, HIGH);
     if ((current - previous >= intervalRed && digitalRead(RED_LED)
       || (current - previous >= intervalYellow && digitalRead(YELLOW_LED)))) {
       previous = current;

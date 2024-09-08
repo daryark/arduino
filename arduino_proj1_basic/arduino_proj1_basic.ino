@@ -3,31 +3,26 @@
 #define YELLOW_LED 8
 #define RED_LED 13
 void setup() {
-  pinMode(SWITCH_BTN, INPUT_PULLUP); // Use internal pull-up for the button
+  pinMode(SWITCH_BTN, INPUT_PULLUP);
   pinMode(RED_LED, OUTPUT);
   pinMode(GREEN_LED, OUTPUT);
   pinMode(YELLOW_LED, OUTPUT);
 }
-unsigned long previous = 0;    // Tracks the last time the LEDs were toggled
-const long interval = 1000;          // 1 second interval for blinking
+unsigned long previous = 0;
+const long interval = 1000;
 void loop() {
-  unsigned long current = millis(); // Get current time
-  // Check if the button is not pressed
+  unsigned long current = millis();
   if (digitalRead(SWITCH_BTN) == HIGH) {
-    previous = 0; // gives fast reaction of YELLOW and RED after switch back
-    // Button pressed, stop the blinking and turn all LEDs off
+    previous = 0;
     digitalWrite(RED_LED, LOW);
     digitalWrite(YELLOW_LED, LOW);
-    digitalWrite(GREEN_LED, HIGH); // Keep GREEN LED on as an indicator
+    digitalWrite(GREEN_LED, HIGH);
   } else {
-    // Button pressed, continue blinking
-    digitalWrite(GREEN_LED, LOW); // Turn GREEN LED off
-    // Check if 1 second has passed to toggle the LEDs
+    digitalWrite(GREEN_LED, LOW);
     if (current - previous >= interval) {
-      previous = current; // Update the last toggle time
-      // Toggle RED and YELLOW LEDs
-      digitalWrite(RED_LED, !digitalRead(RED_LED));   // Toggle RED LED
-      digitalWrite(YELLOW_LED, !digitalRead(YELLOW_LED)); // Toggle YELLOW LED
+      previous = current;
+      digitalWrite(RED_LED, !digitalRead(RED_LED));
+      digitalWrite(YELLOW_LED, !digitalRead(YELLOW_LED));
     }
   }
 }
