@@ -1,8 +1,8 @@
 Arduino piscine
 Simulations for all projects:
 
-  [Proj1 main](https://wokwi.com/projects/409547678205552641)
+  [1.0](https://wokwi.com/projects/409550879389034497)
 
-  [Proj1 bonus1](https://wokwi.com/projects/409547678205552641)
+  [1.1](https://wokwi.com/projects/409550740050040833)
   
-  [Proj1 bonus2](https://wokwi.com/projects/409547678205552641)
+  [1.2](https://wokwi.com/projects/409550617394949121)
