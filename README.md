@@ -14,4 +14,9 @@ Simulations for all projects:
        2.0 - LCD display shows the potentiometer value and corresponds it to the brightness of LED in real-time according to rotation of potentiometer.
 
        2.1 - Control the brightness of the LED from computer via Arduinto Serial Monitor(terminal).
+  
+  3. Servo Control
+       3.0 - Servo motor and up to three sensors. Enable servo motor to move and orient itself in the direction of a light source detected by light detection algorithm and motor movement.
+
+       3.1 - Intergrated second servo motor for another angle. The movement of 2 servo motors syncronized that allows smooth and coordinated tracking of the light source.
      
