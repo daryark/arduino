@@ -1,7 +1,7 @@
-#define SWITCH_BTN 2
-#define GREEN_LED 12
-#define YELLOW_LED 8
-#define RED_LED 13
+#define SWITCH_BTN 7
+#define GREEN_LED 9
+#define YELLOW_LED 10
+#define RED_LED 11
 void setup() {
   pinMode(SWITCH_BTN, INPUT_PULLUP);
   pinMode(RED_LED, OUTPUT);
