@@ -1,0 +1,2 @@
+-add tasks description for each proj
+-add description of realization and purpose of each proj
